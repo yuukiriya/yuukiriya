@@ -1,5 +1,8 @@
-p {
+p.sub-title1 {
     color: aqua;
+}
+p#sub-title2 {
+    color: pink;
 }
 h1 {
     color: red;
@@ -14,8 +17,9 @@ h2 {
 ul {
     color: green;
 }
-span {
-    color: purple;
+span.company {
+    font-weight: bold;
+    font-size: larger;
 }
 span1 {
     color: hotpink;
@@ -30,5 +34,23 @@ span4 {
     color: violet;
 }
 span5 {
+    color: red;
+}
+div.box1{
+    height: 100px;
+    width: 100px;
+    background-color: royalblue;
+    color: red;
+}
+div.box2{
+    height: 100px;
+    width: 100px;
+    background-color: mediumturquoise;
+    color: red;
+}
+div.box3{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
     color: red;
 }
