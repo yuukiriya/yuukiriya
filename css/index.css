@@ -55,3 +55,32 @@ div.box3{
     color: red;
     text-align: center;
 }
+div.box4{
+    height: 100px;
+    width: 100px;
+    border-radius: 70% 70% 0% 70%;
+    background-color: green;
+    display: inline-block;
+}
+div.box5{
+    height: 100px;
+    width: 100px;
+    border-radius: 70% 70% 70% 0%;
+    background-color: green;
+    position: absolute;
+bottom: -260px; left: 115px;
+}
+div.box6{
+    height: 100px;
+    width: 100px;
+    border-radius: 70% 0% 70% 70%;
+    background-color: green;
+    display: inline-block;
+}
+div.box7{
+    height: 100px;
+    width: 100px;
+    border-radius: 0% 70% 70% 70%;
+    background-color: green;
+    display: inline-block;
+}
