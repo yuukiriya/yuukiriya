@@ -58,29 +58,27 @@ div.box3{
 div.box4{
     height: 100px;
     width: 100px;
-    border-radius: 70% 70% 0% 70%;
+    border-radius: 50% 50% 0% 50%;
     background-color: green;
-    display: inline-block;
 }
 div.box5{
     height: 100px;
     width: 100px;
-    border-radius: 70% 70% 70% 0%;
+    border-radius: 50% 50% 50% 0%;
     background-color: green;
-    position: absolute;
-bottom: -260px; left: 115px;
 }
 div.box6{
     height: 100px;
     width: 100px;
-    border-radius: 70% 0% 70% 70%;
+    border-radius: 50% 0% 50% 50%;
     background-color: green;
-    display: inline-block;
 }
 div.box7{
     height: 100px;
     width: 100px;
-    border-radius: 0% 70% 70% 70%;
+    border-radius: 0% 50% 50% 50%;
     background-color: green;
-    display: inline-block;
+}
+div.boxP{
+    display: flex;
 }
