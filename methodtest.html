@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>関数とクラス</title>
+</head>
+<body>
+    <input type="text" id="score1">
+    <input type="text" id="score2">
+    <input type="button" value="+" onclick="Calc.addTwoNumP()">
+    <input type="button" value="-" onclick="Calc.addTwoNumM()">
+    <input type="button" value="*" onclick="Calc.addTwoNumK()">
+    <input type="button" value="/" onclick="Calc.addTwoNumW()">
+    <script>
+        'use script';
+        class Cluculator {
+            constructor(x,y) {
+                this.x=x;
+                this.y=y;
+            }
+            addTwoNumP() {
+                return this.x + this.y;
+            }
+            addTwoNumM() {
+                return this.x - this.y;
+            }
+            addTwoNumK() {
+                return this.x * this.y;
+            }
+            addTwoNumW() {
+                return this.x / this.y;
+            }
+        }
+        let ddd = document.getElementById('score1').value;
+        let bbb = document.getElementById('score2').value;
+
+        let Calc = new Cluculator(ddd,bbb); 
+        document.write(Calc.addTwoNumP());
+        document.write(Calc.addTwoNumM());
+        document.write(Calc.addTwoNumK());
+        document.write(Calc.addTwoNumW());
+    </script>
+</body>
+</html>
