@@ -7,6 +7,56 @@
     <title>初めてのjavaScript</title>
 </head>
 <body>
-    <script src="jspractice.js"></script>
+    <script src="jspractice.js">
+        'use strict';
+
+document.write("Hello World!");
+alert("Hello World!");
+
+console.log("Hello World!"+"田中さん");
+console.log(10+10);
+console.log("10"+"10");
+
+console.log(1+1);
+console.log(1-1);
+console.log(2*2);
+console.log(10/3);
+console.log(10%3);
+
+let x = 1;
+let y = 1;
+x++;
+console.log(x);
+y--;
+console.log(y);
+
+let x = 7;
+let y = x++
+let x2 = 7;
+let y2 = ++x2;
+
+console.log(x);
+console.log(y);
+console.log(x2);
+console.log(y2);
+
+console.log(x++);
+console.log(++x);
+
+// 変数とは　値を代入するための箱
+// 定数とは　値を別名で定義したもの
+
+let age = 30;
+const name = "田中太郎";
+
+age = age + Math.round(Math.random()*10);
+
+console.log(`${name}さんの年齢は${age}です`)
+
+
+// ES6　or　ES2015
+// var 変数名/定数　←使わない
+
+    </script>
 </body>
 </html>

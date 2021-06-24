@@ -14,12 +14,12 @@
     <p>こんにちは。こんにちは。こんにちは。</p>
     <script>
         'use strict'
-        // const textChange = () => {
-        //     document.querySelector('h1').textContent = "Changed!!";
-        //     // document.querySelector('#target').textContent = "Changed!!";
-        //     document.getElementById('target').textContent = "Changed!!";
-        // }
-        // setTimeout(textChange,1000);
+        const textChange = () => {
+            document.querySelector('h1').textContent = "Changed!!";
+            // document.querySelector('#target').textContent = "Changed!!";
+            document.getElementById('target').textContent = "Changed!!";
+        }
+        setTimeout(textChange,1000);
 
         document.getElementById('textChange').addEventListener('click',() => {
             document.getElementById('target').textContent = "Changed!!";

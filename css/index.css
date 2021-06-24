@@ -82,3 +82,6 @@ div.box7{
 div.boxP{
     display: flex;
 }
+div.dltest {
+    width: 500px;
+}
