@@ -8,6 +8,7 @@
     <style type="text/css">
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
     }
     html,
     body,
@@ -16,24 +17,107 @@
         height: 100%;
         width: 100%;
     }
-    div.background{
+    div.BackGround{
         display: table;
         text-align: center;
+        position: absolute;
         z-index: 2;
     }
-    div.heading {
+    div.Heading {
         color: white;
         display: table-cell;
         vertical-align: middle;
         background-image: url(img/画像1.png);
-        z-index: 6;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 4;
+    }
+    header.HEAD_MENU {
+        background-color: #38b48b;
+        top: 0;
+        height: 15%;
+        width: 100%;
+        position: fixed;
+        z-index: 3;
+    }
+    div.headMenu {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    a {
+        font-size: 70px;
+    }
+    div.Content {
+        background-color: #ed6d3d;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+    #about.open-overview {
+
+    }
+    #works.open-work {
+
+    }
+    #contact.open-contact-address {
+        
     }
     </style>
 </head>
 <body>
-    <div class="background"><div class="heading"></div></div>
+    <header class="HEAD_MENU">
+        <div class="headMenu">
+            <a href="#about">About</a>
+            <a href="#works">Works</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+    <div class="BackGround"><div class="Heading"></div></div>
+    <div class="Content" id="about">
+
+    </div>
+    <div class="Content" id="works">
+
+    </div>
+    <div class="Content" id="contact">
+
+    </div>
     <script>
         'use strict'
+
+        const about = document.getElementById('about');
+        const works = document.getElementById('works');
+        const contact = document.getElementById('contact');
+
+        about.addEventListener('click' = ()  => {
+            if (about.className === 'open-overview'){
+                about.className = '';
+            } else {about.className = 'open-overview';
+                    works.className = '';
+                    contact.className = '';
+                }
+        });
+
+        works.addEventListener('click' = ()  => {
+            if (works.className === 'open-work'){
+                works.className = '';
+            } else {about.className = '';
+                    works.className = 'open-work';
+                    contact.className = '';
+                }
+        });
+
+        contact.addEventListener('click' = ()  => {
+            if (contact.className === 'open-contact-address'){
+                contact.className = '';
+            } else {about.className = '';
+                    works.className = '';
+                    contact.className = 'open-contact-address';
+                }
+        });
+
     </script>
 </body>
 </html>
