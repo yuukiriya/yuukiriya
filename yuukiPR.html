@@ -23,12 +23,12 @@
         position: absolute;
          z-index: 2;
     }
-    div.Heading {
+    div.Headline {
         color: white;
         display: table-cell;
         vertical-align: middle;
         position: static;
-        background-image: url(img/画像1.png);
+        background-image: url(img/名前.png);
         background-repeat: no-repeat;
         background-position: center;
         z-index: 4;
@@ -39,9 +39,9 @@
         height: 15%;
         width: 100%;
         position: fixed;
-        z-index: 3;
+        z-index: 6;
     }
-    div.headMenu {
+    div.HeadMenu {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -49,7 +49,62 @@
     a {
         font-size: 70px;
     }
-    div.Content {
+    #about {
+        background-color: #ed6d3d;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 7;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+    div.AboutHeadline{
+        margin: 0 0 25px 0;
+        color: #fffafa;
+        font-size: 46px;
+        padding-left: 20%;
+    }
+    div.BriefHistory{
+        color: #fffafa;
+        padding-left: 18%;
+    }
+    div.CompanyProfBox{
+        display: flex;
+        display: -webkit-flex;
+        margin-left: 17%;
+    }
+    div.Face{
+        background-image: url(img/肖像3.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 320px;
+        height: 320px;
+        margin-bottom: 40px;
+    }
+    div.Face img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    dl.CompanyProf{
+        color: #fffafa;
+        font-size: 25px;
+    }
+    dl.CompanyProf dt{
+        float: left;
+    }
+    dl.CompanyProf dd{
+        margin-left: 200px;
+    }
+    #works {
+        background-color: #ed6d3d;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+    #contact {
         background-color: #ed6d3d;
         height: 100%;
         width: 100%;
@@ -57,7 +112,7 @@
         z-index: 1;
     }
     #about.open-overview {
-
+        z-index: 5;
     }
     #works.open-work {
 
@@ -69,15 +124,34 @@
 </head>
 <body>
     <header class="HEAD_MENU">
-        <div class="headMenu">
+        <div class="HeadMenu">
             <a href="#about">About</a>
             <a href="#works">Works</a>
             <a href="#contact">Contact</a>
         </div>
     </header>
-    <div class="BackGround"><div class="Heading"></div></div>
+    <div class="BackGround"><div class="Headline"></div></div>
     <div class="Content" id="about">
-
+        <div class="AboutHeadline">About</div>
+        <div class="BriefHistory">
+            <ul>
+                <li>フォース株式会社所属し技術者をしております。</li>
+                <li>2021年よりフォース株式会社に入社。</li>
+            </ul>
+        </div>
+        <div class="CompanyProfBox">
+            <div class="Face"></div>
+            <dl class="CompanyProf">
+                <dt>名称：</dt>
+                <dd>フォース株式会社</dd>
+                <dt>所在地:</dt>
+                <dd>〒101-0054 東京都千代田区神田錦町３丁目１８</dd>
+                <dt>お問い合わせ:</dt>
+                <dd>TEL 03-5259-5231</dd>
+                <dt>事業内容:</dt>
+                <dd>人材派遣業</dd>
+            </dl>
+        </div>
     </div>
     <div class="Content" id="works">
 
@@ -88,34 +162,34 @@
     <script>
         'use strict'
 
-        const about = document.getElementById('about');
-        const works = document.getElementById('works');
-        const contact = document.getElementById('contact');
+        const ABOUT = document.getElementById('about');
+        const WORKS = document.getElementById('works');
+        const CONTACT = document.getElementById('contact');
 
-        about.addEventListener('click' = ()  => {
-            if (about.className === 'open-overview'){
-                about.className = '';
-            } else {about.className = 'open-overview';
-                    works.className = '';
-                    contact.className = '';
+        ABOUT.addEventListener('click' = ()  => {
+            if (ABOUT.className === 'open-overview'){
+                ABOUT.className = '';
+            } else {ABOUT.className = 'open-overview';
+                    WORKS.className = '';
+                    CONTACT.className = '';
                 }
         });
 
-        works.addEventListener('click' = ()  => {
-            if (works.className === 'open-work'){
-                works.className = '';
-            } else {about.className = '';
-                    works.className = 'open-work';
-                    contact.className = '';
+        WORKS.addEventListener('click' = ()  => {
+            if (WORKS.className === 'open-work'){
+                WORKS.className = '';
+            } else {ABOUT.className = '';
+                    WORKS.className = 'open-work';
+                    CONTACT.className = '';
                 }
         });
 
-        contact.addEventListener('click' = ()  => {
-            if (contact.className === 'open-contact-address'){
-                contact.className = '';
-            } else {about.className = '';
-                    works.className = '';
-                    contact.className = 'open-contact-address';
+        CONTACT.addEventListener('click' = ()  => {
+            if (CONTACT.className === 'open-contact-address'){
+                CONTACT.className = '';
+            } else {ABOUT.className = '';
+                    WORKS.className = '';
+                    CONTACT.className = 'open-contact-address';
                 }
         });
 
