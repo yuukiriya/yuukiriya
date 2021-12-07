@@ -31,30 +31,35 @@
         background-image: url(img/名前.png);
         background-repeat: no-repeat;
         background-position: center;
-        z-index: 4;
+        z-index: 3;
     }
-    header.HEAD_MENU {
+    header.HEADMENU {
         background-color: #38b48b;
         top: 0;
         height: 15%;
         width: 100%;
         position: fixed;
-        z-index: 6;
+        z-index: 5;
     }
     div.HeadMenu {
         display: flex;
         align-items: center;
         justify-content: space-around;
     }
+    #SHIFTABOUT{
+        background-color: #fffafa;
+        width: 32px;
+        height: 32px;
+    }
     a {
         font-size: 70px;
     }
-    #about {
+    #ABOUT {
         background-color: #ed6d3d;
         height: 100%;
         width: 100%;
         position: absolute;
-        z-index: 7;
+        z-index: 1;
         display: flex;
         flex-direction: column;
         justify-content: end;
@@ -97,41 +102,66 @@
     dl.CompanyProf dd{
         margin-left: 200px;
     }
-    #works {
+    #WORKS {
         background-color: #ed6d3d;
         height: 100%;
         width: 100%;
         position: absolute;
         z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
-    #contact {
+    div.WorksHeadline{
+        margin: 0 0 25px 0;
+        color: #fffafa;
+        font-size: 46px;
+        padding-left: 20%;
+    }
+    div.WorksHistory{
+        color: #fffafa;
+        padding-left: 18%;
+        font-size: 28px;
+    }
+    #CONTACT {
         background-color: #ed6d3d;
         height: 100%;
         width: 100%;
         position: absolute;
         z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
-    #about.open-overview {
-        z-index: 5;
+    div.MailForm{
+        color: #fffafa;
+        padding-left: 20%;
     }
-    #works.open-work {
-
+    #ABOUT.open-overview {
+        z-index: 4;
     }
-    #contact.open-contact-address {
-
+    #WORKS.open-work {
+        z-index: 4;
+    }
+    #CONTACT.open-contact-address {
+        z-index: 4;
     }
     </style>
 </head>
 <body>
-    <header class="HEAD_MENU">
+    <header class="HEADMENU">
         <div class="HeadMenu">
-            <a href="#about">About</a>
-            <a href="#works">Works</a>
-            <a href="#contact">Contact</a>
+            <!-- <i id="SHIFTABOUT"> -->
+            <div id="SHIFTABOUT">
+                <!-- <p>Abouto</p> -->
+            </div>
+            <!-- <a href="#ABOUT" id="SHIFTABOUT">About</a> -->
+            <a href="#WOEKS">Works</a>
+            <a href="#CONTACT">Contact</a>
         </div>
     </header>
     <div class="BackGround"><div class="Headline"></div></div>
-    <div class="Content" id="about">
+    <div class="AboutContent" id="ABOUT">
         <div class="AboutHeadline">About</div>
         <div class="BriefHistory">
             <ul>
@@ -153,45 +183,74 @@
             </dl>
         </div>
     </div>
-    <div class="Content" id="works">
-
+    <div class="Content" id="WORKS">
+        <div class="WorksHeadline">Works</div>
+        <div class="WorksHistory">
+            <ul>
+                <li>令和3年4月、フォース株式会社に入社し研修</li>
+                <li>同年、4月中頃より、コールセンター業務を1週間勤務</li>
+                <li>同年、5月1日より5月末まで、コールセンター業務に勤務</li>
+                <li>同年、6月28日より11月末まで、データ入力事務に勤務</li>
+            </ul>
+        </div>
     </div>
-    <div class="Content" id="contact">
-
+    <div class="Content" id="CONTACT">
+        <div class="MailForm">
+            <a href="https://forms.gle/Rzikqrs99e2ud4fr9">お問い合わせ先</a>
+        </div>
     </div>
     <script>
         'use strict'
 
-        const ABOUT = document.getElementById('about');
-        const WORKS = document.getElementById('works');
-        const CONTACT = document.getElementById('contact');
+        const ABOUT = document.getElementById('ABOUT');
+        const WORKS = document.getElementById('WORKS');
+        const CONTACT = document.getElementById('CONTACT');
+        const SHIFTABOUT = document.getElementById('SHIFTABOUT');
 
-        ABOUT.addEventListener('click' = ()  => {
+        // const shiftabout = () =>{ 
+        //     if (ABOUT.className === 'open-overview'){
+        //         ABOUT.className = '';
+        //     } else {ABOUT.className = 'open-overview';
+        //             WORKS.className = '';
+        //             CONTACT.className = '';
+        //         }
+        // }
+
+        // SHIFTABOUT.onclick = function () {
+        //     if (ABOUT.className === 'open-work'){
+        //         ABOUT.className = '';
+        //     } else {ABOUT.className = '';
+        //             WORKS.className = 'open-work';
+        //             CONTACT.className = '';
+        //         }
+        // }
+
+         SHIFTABOUT.addEventListener('click' = ()  => {
             if (ABOUT.className === 'open-overview'){
                 ABOUT.className = '';
             } else {ABOUT.className = 'open-overview';
                     WORKS.className = '';
                     CONTACT.className = '';
                 }
-        });
+        })
 
-        WORKS.addEventListener('click' = ()  => {
+         WORKS.addEventListener('click' = ()  => {
             if (WORKS.className === 'open-work'){
                 WORKS.className = '';
             } else {ABOUT.className = '';
                     WORKS.className = 'open-work';
                     CONTACT.className = '';
                 }
-        });
+        })
 
-        CONTACT.addEventListener('click' = ()  => {
+         CONTACT.addEventListener('click' = ()  => {
             if (CONTACT.className === 'open-contact-address'){
                 CONTACT.className = '';
             } else {ABOUT.className = '';
                     WORKS.className = '';
                     CONTACT.className = 'open-contact-address';
                 }
-        });
+        })
 
     </script>
 </body>
