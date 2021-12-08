@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己紹介PRAbout</title>
+    <style type="text/css">
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+    }
+    html,
+    body,
+    div.Content {
+        background-color: #ed6d3d;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+    header.HEADMENU {
+        background-color: #38b48b;
+        top: 0;
+        height: 15%;
+        width: 100%;
+        position: fixed;
+        z-index: 3;
+    }
+    div.HeadMenu {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    a {
+        font-size: 70px;
+    }
+    div.AboutHeadline{
+        margin: 0 0 25px 0;
+        color: #fffafa;
+        font-size: 46px;
+        padding-left: 20%;
+    }
+    div.BriefHistory{
+        color: #fffafa;
+        padding-left: 18%;
+    }
+    div.CompanyProfBox{
+        display: flex;
+        display: -webkit-flex;
+        margin-left: 17%;
+    }
+    div.Face{
+        background-image: url(肖像3.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 320px;
+        height: 320px;
+        margin-bottom: 40px;
+    }
+    div.Face img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    dl.CompanyProf{
+        color: #fffafa;
+        font-size: 25px;
+    }
+    dl.CompanyProf dt{
+        float: left;
+    }
+    dl.CompanyProf dd{
+        margin-left: 200px;
+    }
+    #h6{
+        margin-left: -160px;
+    }
+    </style>
+</head>
+<body>
+    <header class="HEADMENU">
+        <div class="HeadMenu">
+            <a href="file:///L:/fosh/gijutu/Unix/Practice/PRSite/yuukiPRHome.html">Home</a>
+            <a href="file:///L:/fosh/gijutu/Unix/Practice/PRSite/yuukiPRWorks.html">Works</a>
+            <a href="file:///L:/fosh/gijutu/Unix/Practice/PRSite/yuukiPRContact.html">Contact</a>
+        </div>
+    </header>
+    <div class="Content" id="ABOUT">
+        <div class="AboutHeadline">About</div>
+        <div class="BriefHistory">
+            <ul>
+                <li>フォース株式会社所属し技術者をしております。</li>
+                <li>2021年よりフォース株式会社に入社。</li>
+            </ul>
+        </div>
+        <div class="CompanyProfBox">
+            <div class="Face"></div>
+            <dl class="CompanyProf">
+                <dt>名称：</dt>
+                <dd>フォース株式会社</dd>
+                <dt>所在地:</dt>
+                <dd>〒101-0054 東京都千代田区神田錦町３丁目１８</dd>
+                <dt>お問い合わせ:</dt>
+                <dd>TEL 03-5259-5231</dd>
+                <dt id="h6">事業内容:</dt>
+                <dd>人材派遣業</dd>
+            </dl>
+        </div>
+    </div>
+</body>
+</html>

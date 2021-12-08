@@ -48,6 +48,7 @@
     }
     #SHIFTABOUT{
         background-color: #fffafa;
+        color: #fffafa;
         width: 32px;
         height: 32px;
     }
@@ -60,7 +61,7 @@
         width: 100%;
         position: absolute;
         z-index: 1;
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         justify-content: end;
     }
@@ -102,6 +103,9 @@
     dl.CompanyProf dd{
         margin-left: 200px;
     }
+    #h6{
+        margin-left: -160px;
+    }
     #WORKS {
         background-color: #ed6d3d;
         height: 100%;
@@ -128,7 +132,7 @@
         height: 100%;
         width: 100%;
         position: absolute;
-        z-index: 1;
+        z-index: 7;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -137,7 +141,7 @@
         color: #fffafa;
         padding-left: 20%;
     }
-    #ABOUT.open-overview {
+    /* #ABOUT.open-overview {
         z-index: 4;
     }
     #WORKS.open-work {
@@ -145,18 +149,18 @@
     }
     #CONTACT.open-contact-address {
         z-index: 4;
-    }
+    } */
     </style>
 </head>
 <body>
     <header class="HEADMENU">
         <div class="HeadMenu">
             <!-- <i id="SHIFTABOUT"> -->
-            <div id="SHIFTABOUT">
-                <!-- <p>Abouto</p> -->
-            </div>
-            <!-- <a href="#ABOUT" id="SHIFTABOUT">About</a> -->
-            <a href="#WOEKS">Works</a>
+            <!-- <div id="SHIFTABOUT">
+                About
+            </div> -->
+            <a href="#ABOUT">About</a>
+            <a href="#WORKS">Works</a>
             <a href="#CONTACT">Contact</a>
         </div>
     </header>
@@ -178,7 +182,7 @@
                 <dd>〒101-0054 東京都千代田区神田錦町３丁目１８</dd>
                 <dt>お問い合わせ:</dt>
                 <dd>TEL 03-5259-5231</dd>
-                <dt>事業内容:</dt>
+                <dt id="h6">事業内容:</dt>
                 <dd>人材派遣業</dd>
             </dl>
         </div>
@@ -200,12 +204,12 @@
         </div>
     </div>
     <script>
-        'use strict'
+        // 'use strict'
 
-        const ABOUT = document.getElementById('ABOUT');
-        const WORKS = document.getElementById('WORKS');
-        const CONTACT = document.getElementById('CONTACT');
-        const SHIFTABOUT = document.getElementById('SHIFTABOUT');
+        // const ABOUT = document.getElementById('ABOUT');
+        // const WORKS = document.getElementById('WORKS');
+        // const CONTACT = document.getElementById('CONTACT');
+        // const SHIFTABOUT = document.getElementById('SHIFTABOUT');
 
         // const shiftabout = () =>{ 
         //     if (ABOUT.className === 'open-overview'){
@@ -225,32 +229,45 @@
         //         }
         // }
 
-         SHIFTABOUT.addEventListener('click' = ()  => {
-            if (ABOUT.className === 'open-overview'){
-                ABOUT.className = '';
-            } else {ABOUT.className = 'open-overview';
-                    WORKS.className = '';
-                    CONTACT.className = '';
-                }
-        })
+        // const changeElement = (siAb) => {
+        //     if(siAb.style.display == ''){
+        //         siAb.style.display = 'none'
+        //     } else {siAb.style.display = ''
+                    // WORKS.className = ''
+                    // CONTACT.className = ''
+        //         }
+        // }
 
-         WORKS.addEventListener('click' = ()  => {
-            if (WORKS.className === 'open-work'){
-                WORKS.className = '';
-            } else {ABOUT.className = '';
-                    WORKS.className = 'open-work';
-                    CONTACT.className = '';
-                }
-        })
+        // SHIFTABOUT.addEventListener('click' = () => {
+        //     changeElement(ABOUT);
+        // }, false)
 
-         CONTACT.addEventListener('click' = ()  => {
-            if (CONTACT.className === 'open-contact-address'){
-                CONTACT.className = '';
-            } else {ABOUT.className = '';
-                    WORKS.className = '';
-                    CONTACT.className = 'open-contact-address';
-                }
-        })
+        //  SHIFTABOUT.addEventListener('click' = ()  => {
+        //     if (ABOUT.className === 'open-overview'){
+        //         ABOUT.className = '';
+        //     } else {ABOUT.className = 'open-overview';
+        //             WORKS.className = '';
+        //             CONTACT.className = '';
+        //         }
+        // })
+
+        //  WORKS.addEventListener('click' = ()  => {
+        //     if (WORKS.className === 'open-work'){
+        //         WORKS.className = '';
+        //     } else {ABOUT.className = '';
+        //             WORKS.className = 'open-work';
+        //             CONTACT.className = '';
+        //         }
+        // })
+
+        //  CONTACT.addEventListener('click' = ()  => {
+        //     if (CONTACT.className === 'open-contact-address'){
+        //         CONTACT.className = '';
+        //     } else {ABOUT.className = '';
+        //             WORKS.className = '';
+        //             CONTACT.className = 'open-contact-address';
+        //         }
+        // })
 
     </script>
 </body>

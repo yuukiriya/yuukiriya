@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己紹介PRHome</title>
+    <style type="text/css">
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+    }
+    html,
+    body,
+    div.BackGround {
+        background-color: #2ca9e1;
+        height: 100%;
+        width: 100%;
+    }
+    div.BackGround{
+        display: table;
+        text-align: center;
+        position: absolute;
+         z-index: 1;
+    }
+    div.Headline {
+        color: white;
+        display: table-cell;
+        vertical-align: middle;
+        position: static;
+        background-image: url(名前.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 2;
+    }
+    header.HEADMENU {
+        background-color: #38b48b;
+        top: 0;
+        height: 15%;
+        width: 100%;
+        position: fixed;
+        z-index: 3;
+    }
+    div.HeadMenu {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    a {
+        font-size: 70px;
+    }
+    </style>
+</head>
+<body>
+    <header class="HEADMENU">
+        <div class="HeadMenu">
+            <a href="file:///L:/fosh/gijutu/Unix/Practice/PRSite/yuukiPRAbout.html">About</a>
+            <a href="file:///L:/fosh/gijutu/Unix/Practice/PRSite/yuukiPRWorks.html">Works</a>
+            <a href="file:///L:/fosh/gijutu/Unix/Practice/PRSite/yuukiPRContact.html">Contact</a>
+        </div>
+    </header>
+    <div class="BackGround"><div class="Headline"></div></div>
+    <script>
+        // 'use strict'
+
+        // const ABOUT = document.getElementById('ABOUT');
+        // const WORKS = document.getElementById('WORKS');
+        // const CONTACT = document.getElementById('CONTACT');
+        // const SHIFTABOUT = document.getElementById('SHIFTABOUT');
+
+        // const shiftabout = () =>{ 
+        //     if (ABOUT.className === 'open-overview'){
+        //         ABOUT.className = '';
+        //     } else {ABOUT.className = 'open-overview';
+        //             WORKS.className = '';
+        //             CONTACT.className = '';
+        //         }
+        // }
+
+        // SHIFTABOUT.onclick = function () {
+        //     if (ABOUT.className === 'open-work'){
+        //         ABOUT.className = '';
+        //     } else {ABOUT.className = '';
+        //             WORKS.className = 'open-work';
+        //             CONTACT.className = '';
+        //         }
+        // }
+
+        // const changeElement = (siAb) => {
+        //     if(siAb.style.display == ''){
+        //         siAb.style.display = 'none'
+        //     } else {siAb.style.display = ''
+                    // WORKS.className = ''
+                    // CONTACT.className = ''
+        //         }
+        // }
+
+        // SHIFTABOUT.addEventListener('click' = () => {
+        //     changeElement(ABOUT);
+        // }, false)
+
+        //  SHIFTABOUT.addEventListener('click' = ()  => {
+        //     if (ABOUT.className === 'open-overview'){
+        //         ABOUT.className = '';
+        //     } else {ABOUT.className = 'open-overview';
+        //             WORKS.className = '';
+        //             CONTACT.className = '';
+        //         }
+        // })
+
+        //  WORKS.addEventListener('click' = ()  => {
+        //     if (WORKS.className === 'open-work'){
+        //         WORKS.className = '';
+        //     } else {ABOUT.className = '';
+        //             WORKS.className = 'open-work';
+        //             CONTACT.className = '';
+        //         }
+        // })
+
+        //  CONTACT.addEventListener('click' = ()  => {
+        //     if (CONTACT.className === 'open-contact-address'){
+        //         CONTACT.className = '';
+        //     } else {ABOUT.className = '';
+        //             WORKS.className = '';
+        //             CONTACT.className = 'open-contact-address';
+        //         }
+        // })
+
+    </script>
+</body>
+</html>
