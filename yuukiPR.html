@@ -47,10 +47,12 @@
         justify-content: space-around;
     }
     #SHIFTABOUT{
-        background-color: #fffafa;
+        /* background-color: #fffafa; */
         color: #fffafa;
-        width: 32px;
-        height: 32px;
+        /* width: 32px;
+        height: 32px; */
+        font-size: 70px;
+        cursor: pointer;
     }
     a {
         font-size: 70px;
@@ -132,7 +134,7 @@
         height: 100%;
         width: 100%;
         position: absolute;
-        z-index: 7;
+        z-index: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -141,13 +143,13 @@
         color: #fffafa;
         padding-left: 20%;
     }
-    /* #ABOUT.open-overview {
+    #ABOUT.open-overview {
         z-index: 4;
     }
-    #WORKS.open-work {
+    /* #WORKS.open-work {
         z-index: 4;
-    }
-    #CONTACT.open-contact-address {
+    } */
+    /* #CONTACT.open-contact-address {
         z-index: 4;
     } */
     </style>
@@ -156,10 +158,10 @@
     <header class="HEADMENU">
         <div class="HeadMenu">
             <!-- <i id="SHIFTABOUT"> -->
-            <!-- <div id="SHIFTABOUT">
+            <div id="SHIFTABOUT">
                 About
-            </div> -->
-            <a href="#ABOUT">About</a>
+            </div>
+            <!-- <a href="#ABOUT">About</a> -->
             <a href="#WORKS">Works</a>
             <a href="#CONTACT">Contact</a>
         </div>
@@ -204,12 +206,12 @@
         </div>
     </div>
     <script>
-        // 'use strict'
+        'use strict'
 
-        // const ABOUT = document.getElementById('ABOUT');
-        // const WORKS = document.getElementById('WORKS');
-        // const CONTACT = document.getElementById('CONTACT');
-        // const SHIFTABOUT = document.getElementById('SHIFTABOUT');
+        const ABOUT = document.getElementById('ABOUT');
+        const WORKS = document.getElementById('WORKS');
+        const CONTACT = document.getElementById('CONTACT');
+        const SHIFTABOUT = document.getElementById('SHIFTABOUT');
 
         // const shiftabout = () =>{ 
         //     if (ABOUT.className === 'open-overview'){
@@ -242,14 +244,14 @@
         //     changeElement(ABOUT);
         // }, false)
 
-        //  SHIFTABOUT.addEventListener('click' = ()  => {
-        //     if (ABOUT.className === 'open-overview'){
-        //         ABOUT.className = '';
-        //     } else {ABOUT.className = 'open-overview';
-        //             WORKS.className = '';
-        //             CONTACT.className = '';
-        //         }
-        // })
+         SHIFTABOUT.addEventListener('click' = ()  => {
+            if (ABOUT.className === 'open-overview'){
+                ABOUT.className = '';
+            } else {ABOUT.className = 'open-overview';
+                    WORKS.className = '';
+                    CONTACT.className = '';
+                }
+        })
 
         //  WORKS.addEventListener('click' = ()  => {
         //     if (WORKS.className === 'open-work'){
